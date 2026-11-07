@@ -1,0 +1,40 @@
+name: Publikuj numerowany instalator
+on:
+  push:
+    branches: [main]
+    paths: ['*.exe', '.github/workflows/release.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: zkmost-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Zweryfikuj numer i opublikuj GitHub Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $false
+          $installers = @(Get-ChildItem -File -Filter '*.exe' | ForEach-Object {
+            if ($_.Name -match '^ZK[-_ ]?Most(?:y)?[-_ ](?:Setup[-_ ])?v?(\d+\.\d+(?:\.\d+)?)(?:[-_ ]Setup)?\.exe$') {
+              [pscustomobject]@{ File=$_; Version=[version]$Matches[1] }
+            }
+          })
+          if (!$installers.Count) { throw 'Brak numerowanego instalatora w katalogu głównym.' }
+          $latest = $installers | Sort-Object Version -Descending | Select-Object -First 1
+          $fileVersion = [version](($latest.File.VersionInfo.ProductVersion -split '\+')[0])
+          if ($fileVersion -ne $latest.Version) { throw 'Numer w nazwie EXE nie odpowiada ProductVersion. Nie zmieniaj samej nazwy starego instalatora.' }
+          $tag = 'v' + $latest.Version.ToString()
+          gh release view $tag --repo $env:GH_REPO *> $null
+          if ($LASTEXITCODE -eq 0) { Write-Host "Wydanie $tag już istnieje; zwiększ numer kolejnego instalatora."; exit 0 }
+          $checksum = $latest.File.FullName + '.sha256'
+          ((Get-FileHash $latest.File.FullName -Algorithm SHA256).Hash.ToLowerInvariant() + '  ' + $latest.File.Name) | Set-Content $checksum -Encoding ascii
+          gh release create $tag $latest.File.FullName $checksum --repo $env:GH_REPO --target $env:GITHUB_SHA --title "ZK Most $tag" --notes "Instalator ZK Most $tag. Zamknij BricsCAD przed ręczną instalacją. Aktualizator w dodatku pobierze nowszą wersję automatycznie i poczeka na zamknięcie CAD." --latest
+          if ($LASTEXITCODE -ne 0) { throw 'Publikacja wydania nie powiodła się.' }
