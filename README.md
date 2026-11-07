@@ -1,4 +1,4 @@
-# ZK Most
+# ZK-Mosty
 
 Mosty, przepusty i modelowanie przekrojów po osi w BricsCAD V26 x64.
 
