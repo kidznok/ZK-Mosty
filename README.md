@@ -1,4 +1,4 @@
-# ZK-Mosty
+﻿# ZK-Mosty
 
 Mosty, przepusty i modelowanie przekrojów po osi w BricsCAD V26 x64.
 
@@ -26,4 +26,4 @@ Domyślnie sprawdza stabilne Releases w tle po uruchomieniu dodatku (nie częśc
 
 Wygląd w rodzinie ZK AutoDWG, przełączniki, ZK Support; belki proste lub po osi, ręczne punkty oparcia i obrót; przekroje zmienne na stacjach, zapisane cięcia, odłączanie do obróbki CAD, rozmieszczanie bloków; przepusty kołowe, skrzynkowe i owalne z półkami oraz ścianami czołowymi z odniesieniem do TIN w XREF; aktualizowane widoki 2D.
 
-227 testów geometrii/projekcji, 17 kontroli WPF oraz 14 testów aktualizatora. Kompilacja nie zastępuje prób instalacji, natywnego modelera CAD i XREF na rzeczywistym stanowisku. W CAD polecenie `ZKMOSTTEST` wykonuje próbę bez zapisywania geometrii testowej. To wersja testowa, bez obliczeń konstrukcyjnych i hydraulicznych.
+227 testów geometrii/projekcji, 17 kontroli WPF oraz 16 testów aktualizatora (w tym rzeczywiste pobranie opublikowanego EXE i weryfikacja SHA-256, bez uruchamiania instalacji). Kompilacja nie zastępuje prób instalacji, natywnego modelera CAD i XREF na rzeczywistym stanowisku. W CAD polecenie `ZKMOSTTEST` wykonuje próbę bez zapisywania geometrii testowej. To wersja testowa, bez obliczeń konstrukcyjnych i hydraulicznych.
