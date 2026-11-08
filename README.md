@@ -1,3 +1,9 @@
+# ZK Most 0.25
+
+W edytorze mostu kliknij **Obliczenia** lub wpisz `ZKMOSTOBLICZENIA`. Moduł importuje długość i stacje podpór. Użytkownik ustala schemat statyczny i sztywność EI. [Instrukcja obliczeń](OBLICZENIA.md).
+
+Karta **Belki** pokazuje dwa schematy. Widocznością elementu steruje przełącznik izolacji, a powiększenie ma osobny przycisk. Wspólny instalator zawiera też zbrojenie płyty i obu kap. [Pobierz instalator 0.25 dla BricsCAD V26](https://github.com/kidznok/ZK-Mosty/releases/download/v0.25/ZKMost-Setup-0.25.exe).
+
 # ZK Most 0.23
 
 W karcie **Przyczółki** ustawisz długość płyty przejściowej przy jej przełączniku, także podczas edycji skrzydła. **Pokaż cały obiekt** przywraca pełną widoczność wybranego modelu i zapisuje ten wybór w DWG. [Instalator dla BricsCAD V26](https://github.com/kidznok/ZK-Mosty/releases/download/v0.23/ZKMost-Setup-0.23.exe) · [Wyniki prób](TESTY-CAD.md).

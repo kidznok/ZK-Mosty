@@ -1,6 +1,6 @@
-# ZK Most 0.23 — instalacja i aktualizacje
+# ZK Most 0.25 — instalacja i aktualizacje
 
-Uruchom ZKMost-Setup-0.23.exe po zamknięciu BricsCAD. Instalacja dla bieżącego użytkownika, bez praw administratora: %LOCALAPPDATA%/ZKProjekt/Most. Menu Start → ZK Most → ustawienia i aktualizacje. Instalator nie zmienia istniejących skryptów startowych ani ustawień zabezpieczeń CAD.
+Uruchom ZKMost-Setup-0.25.exe po zamknięciu BricsCAD. Instalacja dla bieżącego użytkownika, bez praw administratora: %LOCALAPPDATA%/ZKProjekt/Most. Menu Start → ZK Most → ustawienia i aktualizacje. Instalator nie zmienia istniejących skryptów startowych ani ustawień zabezpieczeń CAD.
 
 Wymagania: Windows x64, BricsCAD V26 Pro/BIM/Mechanical i .NET Desktop Runtime 8 x64. Sam instalator nie doinstalowuje środowiska .NET. Pakiet nie jest podpisany certyfikatem wydawcy.
 

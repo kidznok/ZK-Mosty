@@ -1,3 +1,16 @@
+# ZK Most 0.25
+
+- Okno Obliczenia dla otwartego mostu i polecenie ZKMOSTOBLICZENIA. Import stacji podpór, samodzielne określenie schematu i EI.
+- Karta Belki z dwoma schematami, wspólny przełącznik izolacji i osobne powiększanie.
+
+# ZK Most 0.24
+
+Dodano kartę **Zbrojenie kap**. Lewa i prawa kapa mają niezależne parametry prętów podłużnych i poprzecznych U. Przekroje i zestawienia obu stron wstawisz w **Generuj rysunki 2D**.
+
+W edytorze mostu i przepustu wybierz **Generuj rysunki 2D**. Zaznacz widoki i kliknij **Wstaw zaznaczone rysunki**. W CAD wskaż po jednym punkcie dla nowych widoków. Esc w trakcie wskazywania anuluje cały wybór. Kolejne przeliczenia odświeżają zapisane widoki w tych samych miejscach.
+
+Most obsługuje też rzut i widoki przyczółków, rzut zbrojenia z zestawieniem oraz arkusz ogólny. Wpisując inną stację przekroju, można wstawić dodatkowy przekrój.
+
 # ZK Most 0.23
 
 W karcie **Przyczółki** pole **Długość płyty [m]** znajduje się przy przełączniku **Płyta przejściowa**. Możesz zmienić długość dla A1 lub A2 także podczas edycji skrzydła. Po przeliczeniu zmienia się model płyty i jej wymiar we wstawionym widoku bocznym.
