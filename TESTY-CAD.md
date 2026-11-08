@@ -1,4 +1,10 @@
-﻿# Próby 0.19 w BricsCAD V26
+﻿# Walidacja 0.20
+
+Automatyczne testy w oddzielnym, niezapisanym rysunku BricsCAD V26: ZKMOSTTEST 18/18 i ZKSESSIONTEST 9/9. Sprawdzono bryły i siatki przepustu, filtr obwiedni obróconego bloku i odczyt TIN, usunięcie filtra, izolację warstw oraz trzy rzutnie z geometrią przekroju i znacznikiem.
+
+Do próby na rzeczywistym projekcie: wskazywanie terenu we własnym XREF, edycja obwiedni, zmiana stacji przekroju i rzędnej osi, powrót z izolacji po przebudowie oraz geometria stożków przy skośnych podporach.
+
+# Próby 0.19 w BricsCAD V26
 
 1. Po aktualizacji sprawdź napis ZK MOST 0.19. Przelicz istniejący przepust. W lekkim trybie wybierz rurę oraz ścianę z otworem: każda ma być jednym obiektem. W trybie pełnym sprawdź typ Bryła 3D i zachowany otwór. ZKMOSTTEST zawiera próby łączenia korpusów; jeszcze nie wykonano ich na działającym CAD.
 2. Belki → Wyizoluj element: inne elementy i podkład mają zniknąć. Powiększ do elementu dopasowuje widok bez obrotu. Pokaż cały obiekt oraz zamknięcie edytora przywracają pierwotną widoczność. Przebuduj belki przy aktywnej izolacji.

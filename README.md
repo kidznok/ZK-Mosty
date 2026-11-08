@@ -1,4 +1,12 @@
-﻿# ZK Most 0.19
+﻿# ZK Most 0.20
+
+[Instalator ZKMost-Setup-0.20.exe](https://github.com/kidznok/ZK-Mosty/releases/download/v0.20/ZKMost-Setup-0.20.exe).
+
+Rzędne posadowienia podpór pozostają stałe przy zmianie rzędnej osi. Nawigacja boczna, poprawiony podgląd i zoom listy obiektów, stabilna izolacja warstw, stożki ku przyczółkowi, naprawa eVertexAfterFace, wartości do dwóch miejsc, zakres terenu z polilinii i trzy rzutnie z przekrojem.
+
+Walidacja: 330 testów geometrii, 39 interfejsu, 25 aktualizatora; BricsCAD V26: 18 + 9 testów natywnych. [Szczegóły zmian](ZMIANY-AKTUALNE.md), [próby na projekcie](TESTY-CAD.md). Kontrola WR-M ma zakres częściowy.
+
+# ZK Most 0.19
 
 Aktualny instalator: [ZKMost-Setup-0.19.exe](https://github.com/kidznok/ZK-Mosty/releases/download/v0.19/ZKMost-Setup-0.19.exe).
 

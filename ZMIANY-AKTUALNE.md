@@ -1,4 +1,19 @@
-﻿# ZK Most 0.19 — pojedyncze elementy przepustu, izolacja i WR-M
+﻿# ZK Most 0.20 — podgląd, teren i stałe posadowienie
+
+- Rzędna osi w środku obiektu zmienia pomost i ustrój nośny. Rzędne posadowienia podpór pozostają stałe; zmienia się wysokość podpór. Teren pozostaje na swojej rzędnej.
+- Nawigacja boczna i pogrupowana pierwsza karta: obiekt, oś, profil, teren oraz przekrój kontrolny.
+- Lista obiektów kolejkuje podgląd i powiększenie do zakończenia polecenia otwierającego okno.
+- Izolacja wyłącza warstwy innych elementów, bez przełączania widoczności pojedynczych obiektów i bez migającego podświetlenia. Powrót przywraca poprzedni stan warstw.
+- Osobne czytelne warstwy MODEL dla belek, poprzecznic, kap, podpór i wyposażenia.
+- Stożek: domyślnie ku przyczółkowi / otworowi mostu. Dostępny także wariant za skrzydłem i obustronny. Podgląd obrysu usuwa wewnętrzne przekątne siatki.
+- Poprawiona kolejność wierzchołków i ścian siatek przepustu, eliminująca eVertexAfterFace.
+- Wyświetlanie wartości do dwóch miejsc po przecinku, bez utraty dokładności obliczeń.
+- Teren: cały albo zakres wskazany zamkniętą polilinią z prostych odcinków. Przycinane są trójkąty TIN i wystąpienie XREF w bieżącym DWG; plik źródłowy odnośnika nie jest zmieniany.
+- Trzy natywne rzutnie: duże 3D, rzut oraz przekrój. Stację przekroju można wpisać lub wskazać na osi; fioletowa linia oznacza jego miejsce. Zarejestrowany przekrój odświeża się przy przebudowie modelu.
+
+Sprawdzone: 330 testów geometrii, 39 testów interfejsu oraz 18 + 9 testów w osobnym pustym rysunku BricsCAD V26. Kontrola WR-M nadal ma zakres częściowy opisany w WRM-AUDYT.md.
+
+# ZK Most 0.19 — pojedyncze elementy przepustu, izolacja i WR-M
 
 - Nasyp przy skrzydle: skarpa rosnąca od stopy przyczółka ku końcowi skrzydła, połączona z zaokrąglonym zakończeniem. Przełącznik pozwala zachować wcześniejszy profil. W CAD widok przyczółka w oknie jest rzutowany z geometrii modelu po przeliczeniu, a nie zastępowany osobnym trójkątem.
 - Pomost: osobne szerokości kap L/P i osobne pochylenia kap. Wartość dodatnia podnosi zewnętrzną krawędź; wyposażenie i rysunki korzystają z nowej powierzchni. Nowe pochyłe kapy opierają się na górze płyty.
