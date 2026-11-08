@@ -1,4 +1,20 @@
-﻿# ZK Most 0.18 — widoczny numer załadowanej wersji
+﻿# ZK Most 0.19 — pojedyncze elementy przepustu, izolacja i WR-M
+
+- Nasyp przy skrzydle: skarpa rosnąca od stopy przyczółka ku końcowi skrzydła, połączona z zaokrąglonym zakończeniem. Przełącznik pozwala zachować wcześniejszy profil. W CAD widok przyczółka w oknie jest rzutowany z geometrii modelu po przeliczeniu, a nie zastępowany osobnym trójkątem.
+- Pomost: osobne szerokości kap L/P i osobne pochylenia kap. Wartość dodatnia podnosi zewnętrzną krawędź; wyposażenie i rysunki korzystają z nowej powierzchni. Nowe pochyłe kapy opierają się na górze płyty.
+- Karta Podpory pokazuje także przyczółki, z bezpośrednim przyciskiem przejścia do skrzydeł i dojazdu. Lista nie jest pusta, gdy obiekt ma tylko przyczółki.
+- Rura i każda ściana czołowa z otworem: jeden obiekt. Lekki podgląd tworzy siatkę, tryb pełny łączy sektory w bryłę CAD. Otwór nie jest zalewany materiałem. Po instalacji przelicz istniejący przepust.
+- Lista obiektów ma po prawej obracający się podgląd aktualnej geometrii CAD oraz Powiększ do obiektu.
+- Każda karta ma też Powiększ do elementu, z zachowaniem kierunku widoku CAD.
+- Na kartach mostu i przepustu: Wyizoluj element oraz Pokaż cały obiekt. Zamykanie edytora przywraca widoczność. Przy przebudowie izolacja pozostaje aktywna. Usunięto ze wstążki Wygaszaj / ukryj; stare polecenie pozostaje zgodne.
+- Nowe przyczółki: skrzydło prostopadłe do ściany podpory, również skośnej. Edytowalny pionowy uskok i pochyły spód. Wskaż prostą polilinię o dwóch wierzchołkach, aby powiązać kąt i długość; najbliższy koniec wyznacza początek. Nie obsługuje tu jeszcze załamanej polilinii skrzydła mostowego.
+- W istniejącym przyczółku przycisk Obrys z podcięciem ustawia nowy szablon; stare ustawienia nie są nadpisywane przy samym otwarciu pliku.
+- Karta Sprawdź z WR-M: częściowa kontrola geometrii z punktami dokumentu i wskazaniem brakujących danych. Nie zastępuje obliczeń konstrukcyjnych, hydraulicznych i geotechnicznych. Pełny zakres i braki opisano w WRM-AUDYT.md.
+- Oryginalny znak ZK z rodziny AutoDWG w oknach; ikona ZK programu, instalatora i deinstalatora. Wspólne kolory i przełączniki ZK UI.
+
+Walidacja natywnych operacji łączenia i izolacji wymaga próby w BricsCAD V26. ZKMOSTTEST zawiera nowe próby jednego korpusu i jednej ściany; uruchamia je w wycofywanej transakcji.
+
+# ZK Most 0.18 — widoczny numer załadowanej wersji
 
 Numer wersji jest widoczny w nagłówku i pasku tytułu edytora mostu, przepustu, listy obiektów, podglądu i aktualizatora. Numer pochodzi ze wspólnej stałej kompilowanej z programem, a nie z pliku instalatora na dysku. Dzięki temu okno wskazuje wersję faktycznie załadowanego modułu.
 

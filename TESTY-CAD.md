@@ -1,4 +1,14 @@
-﻿# Próby aktualizatora 0.17
+﻿# Próby 0.19 w BricsCAD V26
+
+1. Po aktualizacji sprawdź napis ZK MOST 0.19. Przelicz istniejący przepust. W lekkim trybie wybierz rurę oraz ścianę z otworem: każda ma być jednym obiektem. W trybie pełnym sprawdź typ Bryła 3D i zachowany otwór. ZKMOSTTEST zawiera próby łączenia korpusów; jeszcze nie wykonano ich na działającym CAD.
+2. Belki → Wyizoluj element: inne elementy i podkład mają zniknąć. Powiększ do elementu dopasowuje widok bez obrotu. Pokaż cały obiekt oraz zamknięcie edytora przywracają pierwotną widoczność. Przebuduj belki przy aktywnej izolacji.
+3. Edytuj: wybierz obiekt na liście. Po prawej obraca się podgląd jego zapisanej geometrii CAD. Powiększ do obiektu pozostawia listę otwartą.
+4. Nowy przyczółek: włącz skrzydło i skos podpory. Kąt 0 oznacza prostopadłość do ściany. Ustaw podcięcie i wskaż prostą dwuwierzchołkową polilinię; zmiana jej długości ma aktualizować skrzydło oraz istniejące widoki 2D. Sprawdź osobno A1/A2 i L/P.
+5. Sprawdź z WR-M → Sprawdź geometrię. Płyta 0,20 m ma zgłaszać uwagę, 0,30 m — sprawdzony warunek grubości; brak danych o posadowieniu nie może dawać ogólnego wyniku zgodny.
+6. Pomost: wpisz kapę L=3 m, P=1 m, pochylenia L=2%, P=-1%. Sprawdź górne powierzchnie, oparcie na płycie, krawężniki, podstawy barierek i odświeżone przekroje. Podpory: na liście mają być A1/A2 nawet bez filara pośredniego.
+7. Instalator, deinstalator i okna mają ikonę ZK, aktualizator pokazuje 0.19.
+
+# Próby aktualizatora 0.17
 
 1. Po zainstalowaniu 0.17, przy dostępnym nowszym wydaniu, otwórz Aktualizacje i kliknij raz Sprawdź i zainstaluj aktualizację. Po pobraniu pozostaw aktualizator otwarty i zamknij BricsCAD. Instalator ma uruchomić się sam, bez ponownego kliknięcia.
 2. Anuluj w trakcie oczekiwania: po zamknięciu CAD instalator nie może wystartować.

@@ -1,4 +1,12 @@
-﻿# ZK-Mosty
+﻿# ZK Most 0.19
+
+Aktualny instalator: [ZKMost-Setup-0.19.exe](https://github.com/kidznok/ZK-Mosty/releases/download/v0.19/ZKMost-Setup-0.19.exe).
+
+Wydanie dodaje osobne szerokości i pochylenia kap L/P, pełną listę podpór, nasyp rosnący ku końcowi skrzydła, podgląd przyczółka z geometrii modelu, pojedyncze korpusy przepustu, izolowanie i powiększanie z kart oraz obracający się podgląd listy obiektów. Logo i ikona pochodzą z rodziny ZK.
+
+Karta Sprawdź z WR-M wykonuje częściową kontrolę geometrii; zakres i braki: [WRM-AUDYT.md](WRM-AUDYT.md). Obliczenia konstrukcyjne, geotechniczne i hydrauliczne nie są automatycznie sprawdzane. Testy natywnych operacji w BricsCAD pozostają do wykonania: [TESTY-CAD.md](TESTY-CAD.md).
+
+# ZK-Mosty
 
 Mosty, przepusty i modelowanie przekrojów po osi w BricsCAD V26 x64.
 
