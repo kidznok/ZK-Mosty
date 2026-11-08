@@ -1,4 +1,4 @@
-# ZK-Mosty
+﻿# ZK-Mosty
 
 Mosty, przepusty i modelowanie przekrojów po osi w BricsCAD V26 x64.
 
@@ -10,13 +10,13 @@ Po instalacji uruchom BricsCAD. Gdy profil ma wyłączone automatyczne ładowani
 
 ## Kolejne wersje
 
-Wgraj na gałąź **main** gotowy plik **ZKMost-Setup-0.13.0.exe**, potem kolejny z wyższym numerem. Workflow automatycznie:
+Wgraj na gałąź **main** gotowy plik **ZKMost-Setup-0.16.exe**, potem kolejny z wyższym numerem, np. ZKMost-Setup-0.17.exe. Wersje nowych wydań mają dwa człony: 0.16, 0.17 itd. Workflow automatycznie:
 
 1. wybierze najwyższy numer spośród instalatorów w katalogu głównym;
 2. porówna nazwę z ProductVersion pliku EXE;
 3. utworzy stabilne GitHub Release z odpowiednim tagiem i instalatorem.
 
-Starsze pliki mogą pozostać. Nie zmieniaj samej nazwy starszego instalatora. Nowe EXE muszą rzeczywiście zawierać nową wersję programu. Jeśli GitHub Actions są wyłączone, opublikuj Release ręcznie: np. tag `v0.13.0`, plik `ZKMost-Setup-0.13.0.exe`.
+Starsze pliki mogą pozostać. Nie zmieniaj samej nazwy starszego instalatora. Nowe EXE muszą rzeczywiście zawierać nową wersję programu. Jeśli GitHub Actions są wyłączone, opublikuj Release ręcznie: np. tag `v0.16`, plik `ZKMost-Setup-0.16.exe`.
 
 ## Aktualizator
 

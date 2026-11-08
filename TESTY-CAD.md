@@ -1,4 +1,14 @@
-﻿# Próby 0.15.0
+﻿# Próby 0.16
+
+1. Podświetlenie: Filary → wybierz P2; tylko P2 ma być w pełnym niebieskim kolorze ZK z wyraźnym obrysem. Obróć widok, przełącz kartę i zamknij okno — grafika tymczasowa ma zniknąć bez zmiany kolorów modelu.
+2. Pomost: wpisz jezdnię L=5 m i P=3 m, kapy=2 m. Płyta ma 12 m, od osi 7 m w lewo i 5 m w prawo. Zwiększenie kapy nie zmienia obu jezdni. Sprawdź krawężniki, wyposażenie i rysunek przekroju.
+3. Przyczółki: wybierz A1, klikaj korpus, skrzydło, płytę i nasyp na wspólnym schemacie. Zmieniaj długości i wysokości, sprawdź model i bok. Karty skrzydeł i dojazdu nie powinny być osobnymi kartami głównymi.
+4. Rysunki: odśwież widoki przez Przelicz teraz. W skali 1:100 tekst wymiaru ma 0,25 jednostki modelu (m), DIMLFAC=100 i DIMSCALE=1. Sprawdź niezależność od bieżącego stylu wymiarowego CAD oraz brak ogromnych grotów i tekstów.
+5. Właściwości linii rysunku: nazwa warstwy zawiera nazwę obiektu, rodzaj widoku, element (BELKI / SLUPY / KAPY itd.) i rodzaj krawędzi. Wymiary i opisy są oddzielnie.
+6. Gzymsy i bariery: osobne rozstawy są zachowane; Wspólne stacje słupków wyrównuje obie linie na wybranej stronie. Zmiana jednej strony nie zmienia drugiej.
+7. ZKMOSTTEST: dodatkowo sprawdza wymiar po nadaniu domyślnych ustawień bazy. Próba jest wycofywana; wynik natywny CAD raportuj oddzielnie od testów Core/WPF.
+
+# Próby 0.15.0
 
 1. Nowy obiekt → Most, nadaj nazwę, wybierz 2D / 3D / ZK Droga i teren. Utwórz drugi most i przepust; Edytuj ma pokazać wszystkie. Zamknij i otwórz DWG, powtórz edycję.
 2. Przepust → Cała polilinia + Na żywo: skróć / wydłuż oś uchwytem. Sprawdź model, zakres i istniejące rysunki po zakończeniu polecenia.

@@ -1,4 +1,26 @@
-﻿# ZK Most 0.15.0 — obiekty w DWG i geometria dojazdów
+﻿# ZK Most 0.16 — poprawki rysunków i wspólna karta przyczółka
+
+Numeracja wydań od tej paczki: 0.16, 0.17 itd. Instalator, tag GitHub i wersja aktualizatora używają dwóch członów.
+
+Pomost: osobne szerokości jezdni L/P. Szerokość płyty jest sumą obu jezdni i kap. Zwiększenie kapy poszerza obiekt bez zabierania szerokości jezdni. Obsługiwany jest przekrój asymetryczny względem osi: płyta, kapy, krawężniki, wyposażenie, skrzydła i opisy korzystają z właściwych odległości od osi. Przy otwieraniu starego obiektu szerokości jezdni są wyznaczane z jego dotychczasowej szerokości, bez zmiany geometrii.
+
+Przyczółki: jedna karta ze wspólnym schematem korpusu, fundamentu, skrzydła, płyty przejściowej i nasypu. Wybierz element z listy lub kliknij schemat; jego parametry pojawiają się obok. Dotychczasowe dwie osobne karty skrzydeł i dojazdu nie występują w głównej nawigacji. Filary mają osobną kartę i nie mieszają się z przyczółkami.
+
+Rysunki: poprawiono kolejność ustawiania stylu wymiarów po SetDatabaseDefaults. Wymiary otrzymują własną skalę, wysokość tekstu, wielkość znaków, przelicznik m → cm i wyłączoną anotatywność. Poprawka działa po odświeżeniu istniejących widoków. Dodano natywną próbę ZKMOSTTEST weryfikującą rzeczywiste właściwości wymiaru.
+
+Warstwy 2D: podział według elementu i rodzaju krawędzi, np. M-01_RYS_PRZEKROJ_1_BELKI_PRZEKROJ, M-01_RYS_BOK_2_SLUPY_WIDOCZNE. Osobne warstwy: WYMIARY, OPISY, RZEDNE, SPADKI, OSIE, TEREN i wypełnienia poszczególnych elementów. Podział jest stosowany także do prostych starszych widoków przy ich regeneracji.
+
+Podział funkcjonalny w Rysunki dotyczy opisów, nie geometrii. Domyślne opisy wynikają teraz z jezdni L/P i kap. Własny podział pozostaje opcją do niestandardowego opisu; jego szerokości nadal muszą sumować się do szerokości płyty.
+
+# Dalsze zmiany 0.16 — wyraźne podświetlenie w kolorze ZK
+
+Poprawiono przezroczystość grafiki tymczasowej: podświetlenie jest teraz nieprzezroczyste i używa niebieskiego AccentBrush wspólnej palety ZK. Dodano wyraźny obrys krawędzi bez szwów triangulacji. Karta Podpory wyróżnia konkretnie podporę wybraną na liście (np. P2), a nie wszystkie podpory naraz. Kolory i warstwy rzeczywistych obiektów nie są zmieniane.
+
+Gzymsy i bariery: opcja Wspólne stacje słupków łączy rozstaw linii przy jezdni i przy krawędzi kapy na wybranej stronie. Bez niej obie linie zachowują niezależne wartości Rozstaw słupków [m]. Wspólne stacje oznaczają punkty względem tej samej osi; na łuku odległości mierzone po różnych odsuniętych liniach mogą być różne. Rysunki odświeżają się jak dotychczas.
+
+Kompilacja i testy Core/WPF są wykonywane automatycznie. Ostateczna ocena kontrastu i grubości obrysu w stylach wizualnych BricsCAD wymaga próby w otwartym CAD.
+
+# ZK Most 0.15.0 — obiekty w DWG i geometria dojazdów
 
 Nowy obiekt (ZKMOSTNEW) otwiera wybór Most / Przepust. Edytuj (ZKMOST) wyświetla listę mostów i przepustów zapisanych w DWG. Obsługiwanych jest wiele mostów, a zapis starego pojedynczego mostu jest zachowywany i dołączany do listy. ZKPRZEPUST nadal działa jako skrót. Pierwsza karta zawiera nazwę, oś, źródło niwelety i teren. Dotychczasowe publiczne polecenia pozostają bez numerów.
 
