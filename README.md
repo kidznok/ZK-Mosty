@@ -1,3 +1,7 @@
+# ZK Most 0.22
+
+Po wybraniu **Belki → Wyizoluj element** widok pokazuje same belki również po przeliczeniu mostu. **Pokaż cały obiekt** przywraca wcześniejszą widoczność warstw. [Pobierz instalator dla BricsCAD V26](https://github.com/kidznok/ZK-Mosty/releases/download/v0.22/ZKMost-Setup-0.22.exe).
+
 # ZK Most 0.21
 
 [Pobierz wspólny instalator dla BricsCAD V26](https://github.com/kidznok/ZK-Mosty/releases/download/v0.21/ZKMost-Setup-0.21.exe).

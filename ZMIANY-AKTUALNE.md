@@ -1,3 +1,11 @@
+# ZK Most 0.22
+
+W edytorze wybierz **Belki → Wyizoluj element**. BricsCAD przełącza warstwy i odświeża wszystkie rzutnie. Przebudowa modelu stosuje aktywną izolację przed wyświetleniem wyniku. **Pokaż cały obiekt** przywraca wcześniejszą widoczność warstw.
+
+Ponowne wybranie **Pokaż w 3 widokach** ustawia trzy rzutnie także w już podzielonym oknie modelu.
+
+W starszych DWG składowe wygenerowanych siatek przejmują warstwę swojego elementu. Pozwala to wyłączyć pomost także wtedy, gdy przy tworzeniu belek był warstwą roboczą.
+
 # ZK Most 0.21
 
 - Karta **Zbrojenie płyty** w edytorze mostu. Dwie niezależne siatki, osie prętów 3D, rzuty i zestawienie zapisane w DWG.

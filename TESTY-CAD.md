@@ -1,3 +1,9 @@
+# Próby wydania 0.22 w BricsCAD V26
+
+- W układzie trzech rzutni na kopii mostu M-01 z terenem w XREF kliknięto przycisk w karcie Belki. Widocznych było pięć belek spośród 833 elementów modelu. Po przeliczeniu w otwartym edytorze porównano obraz cieniowanej rzutni z rysunkiem zawierającym tylko pięć belek. W przebiegu końcowym różnił się jeden piksel z ponad pięciu milionów.
+- Zmiana karty na Pomost w trakcie izolacji pokazała 594 elementy pomostu. Po kliknięciu Pokaż cały obiekt porównano włączenie, zamrożenie i blokadę warstw ze stanem wyjściowym.
+- Osobno sprawdzono starszą siatkę ze składowymi na zablokowanej warstwie pomostu. Po izolacji i przebudowie składowe belek miały warstwę belek.
+
 # Próby wydania 0.21 w BricsCAD V26
 
 - Na kopii ZB-01-plyta.dwg sprawdzono 324 osie prętów 3D i 324 osie w rzucie oraz zestawienie. Po wyłączeniu dolnej siatki pozostały 162 pręty. Kolejne przebudowy i ponowne otwarcie zapisanego DWG zachowały liczbę i ustawienia.

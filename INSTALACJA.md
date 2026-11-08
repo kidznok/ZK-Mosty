@@ -1,6 +1,6 @@
-# ZK Most 0.21 — instalacja i aktualizacje
+# ZK Most 0.22 — instalacja i aktualizacje
 
-Uruchom ZKMost-Setup-0.21.exe po zamknięciu BricsCAD. Instalacja dla bieżącego użytkownika, bez praw administratora: %LOCALAPPDATA%/ZKProjekt/Most. Menu Start → ZK Most → ustawienia i aktualizacje. Instalator nie zmienia istniejących skryptów startowych ani ustawień zabezpieczeń CAD.
+Uruchom ZKMost-Setup-0.22.exe po zamknięciu BricsCAD. Instalacja dla bieżącego użytkownika, bez praw administratora: %LOCALAPPDATA%/ZKProjekt/Most. Menu Start → ZK Most → ustawienia i aktualizacje. Instalator nie zmienia istniejących skryptów startowych ani ustawień zabezpieczeń CAD.
 
 Wymagania: Windows x64, BricsCAD V26 Pro/BIM/Mechanical i .NET Desktop Runtime 8 x64. Sam instalator nie doinstalowuje środowiska .NET. Pakiet nie jest podpisany certyfikatem wydawcy.
 
@@ -14,8 +14,8 @@ Przy aktualizacji instalator czeka na zakończenie uruchamiającego go procesu a
 
 ## Publikacja kolejnego instalatora
 
-W repozytorium główna gałąź main ma workflow. Wgraj do katalogu głównego gotowy instalator np. ZKMost-Setup-0.21.exe. Numer w nazwie musi odpowiadać rzeczywistej wersji ProductVersion pliku EXE. Workflow utworzy tag v0.21 i stabilne GitHub Release z instalatorem. Można pozostawić poprzednie pliki. Nie wystarczy zmiana nazwy starszego instalatora.
+W repozytorium główna gałąź main ma workflow. Wgraj do katalogu głównego gotowy instalator np. ZKMost-Setup-0.22.exe. Numer w nazwie musi odpowiadać rzeczywistej wersji ProductVersion pliku EXE. Workflow utworzy tag v0.22 i stabilne GitHub Release z instalatorem. Można pozostawić poprzednie pliki. Nie wystarczy zmiana nazwy starszego instalatora.
 
-Obsługiwane nazwy: ZKMost-Setup-0.21.exe i ZKMost-0.21-Setup.exe. Numer instalatora musi odpowiadać tagowi wydania. Użytkownicy z włączonymi aktualizacjami odbiorą nowe wydanie przy kolejnym sprawdzeniu. Sam plik wrzucony do repozytorium nie jest źródłem pobierania dla aplikacji — workflow automatycznie publikuje go w Releases. Jeśli Actions są wyłączone, utwórz Release ręcznie i dołącz EXE.
+Obsługiwane nazwy: ZKMost-Setup-0.22.exe i ZKMost-0.22-Setup.exe. Numer instalatora musi odpowiadać tagowi wydania. Użytkownicy z włączonymi aktualizacjami odbiorą nowe wydanie przy kolejnym sprawdzeniu. Sam plik wrzucony do repozytorium nie jest źródłem pobierania dla aplikacji — workflow automatycznie publikuje go w Releases. Jeśli Actions są wyłączone, utwórz Release ręcznie i dołącz EXE.
 
 Szczegóły sprawdzenia w BricsCAD V26 zawiera TESTY-CAD.md.
