@@ -1,4 +1,10 @@
-﻿# ZK Most 0.17 — aktualizacja po zamknięciu BricsCAD i ponawianie 504
+﻿# ZK Most 0.18 — widoczny numer załadowanej wersji
+
+Numer wersji jest widoczny w nagłówku i pasku tytułu edytora mostu, przepustu, listy obiektów, podglądu i aktualizatora. Numer pochodzi ze wspólnej stałej kompilowanej z programem, a nie z pliku instalatora na dysku. Dzięki temu okno wskazuje wersję faktycznie załadowanego modułu.
+
+Jeżeli po instalacji nadal widzisz dawny układ osobnych kart Skrzydła i stożki / Przyczółek i dojazd, BricsCAD prawdopodobnie ładuje starszą paczkę. Zamknij wszystkie procesy CAD, zainstaluj aktualną paczkę i używaj loadera z %LOCALAPPDATA%/ZKProjekt/Most/ZKMost-start.lsp zamiast kopii ze starego folderu.
+
+# ZK Most 0.17 — aktualizacja po zamknięciu BricsCAD i ponawianie 504
 
 Sprawdź i zainstaluj aktualizację: jedno kliknięcie sprawdza wersję, pobiera instalator i weryfikuje rozmiar oraz SHA-256. Jeżeli BricsCAD jest otwarty, aktualizator pozostaje uruchomiony i czeka. Po zamknięciu wszystkich procesów BricsCAD uruchamia cichą instalację bez drugiego kliknięcia i bez ponownego otwierania aktualizatora. Pozostaw okno aktualizatora otwarte. Anuluj lub zamknięcie tego okna przerywa oczekiwanie i nie uruchamia instalacji.
 
