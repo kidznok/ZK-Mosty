@@ -1,4 +1,16 @@
-﻿# ZK Most 0.16 — poprawki rysunków i wspólna karta przyczółka
+﻿# ZK Most 0.17 — aktualizacja po zamknięciu BricsCAD i ponawianie 504
+
+Sprawdź i zainstaluj aktualizację: jedno kliknięcie sprawdza wersję, pobiera instalator i weryfikuje rozmiar oraz SHA-256. Jeżeli BricsCAD jest otwarty, aktualizator pozostaje uruchomiony i czeka. Po zamknięciu wszystkich procesów BricsCAD uruchamia cichą instalację bez drugiego kliknięcia i bez ponownego otwierania aktualizatora. Pozostaw okno aktualizatora otwarte. Anuluj lub zamknięcie tego okna przerywa oczekiwanie i nie uruchamia instalacji.
+
+Ponawianie po HTTP 504, 502, 503, 500, 408, 429 i błędach połączenia: maksymalnie cztery próby z przerwami 1, 2 i 4 s. Obsługiwany jest też Retry-After serwera, ograniczony do 10 s. Sprawdzenie odpowiedzi ma limit 30 s na próbę. Ponawianie dotyczy metadanych wydania oraz odpowiedzi pobierania instalatora. Stałe błędy (np. 404) nie są ponawiane. Po wyczerpaniu prób pojawia się czytelny komunikat zamiast surowego błędu HTTP.
+
+Automat w tle korzysta z tego samego oczekiwania na CAD. Błąd pobierania nie przesuwa kolejnego sprawdzenia o 12 godzin. Instalator blokuje równoległe uruchomienie dwóch instalacji, np. z ręcznego i automatycznego aktualizatora.
+
+Uwaga dotycząca pierwszego przejścia: aktualizator w starszej wersji 0.16 zachowuje dotychczasowy sposób działania do czasu zainstalowania 0.17. Można zainstalować paczkę 0.17 ręcznie po zamknięciu CAD; kolejne aktualizacje będą już używać nowego przebiegu.
+
+Testy obejmują 504→502→200, cztery nieudane próby 504, brak ponawiania 404, weryfikację pliku po ponowieniu, oczekiwanie na CAD, pojedyncze uruchomienie instalatora oraz anulowanie. W testach instalator nie jest uruchamiany na komputerze.
+
+# ZK Most 0.16 — poprawki rysunków i wspólna karta przyczółka
 
 Numeracja wydań od tej paczki: 0.16, 0.17 itd. Instalator, tag GitHub i wersja aktualizatora używają dwóch członów.
 

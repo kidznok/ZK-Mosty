@@ -1,4 +1,11 @@
-﻿# Próby 0.16
+﻿# Próby aktualizatora 0.17
+
+1. Po zainstalowaniu 0.17, przy dostępnym nowszym wydaniu, otwórz Aktualizacje i kliknij raz Sprawdź i zainstaluj aktualizację. Po pobraniu pozostaw aktualizator otwarty i zamknij BricsCAD. Instalator ma uruchomić się sam, bez ponownego kliknięcia.
+2. Anuluj w trakcie oczekiwania: po zamknięciu CAD instalator nie może wystartować.
+3. Gdy serwer odpowiada 504, komunikat powinien wskazywać kolejną próbę. Po czterech nieudanych próbach ma pojawić się czytelna informacja o niedostępnym GitHubie.
+4. Testy automatyczne symulują proces CAD i błędy HTTP; pełne nadpisanie plików instalacji na rzeczywistym CAD pozostaje próbą instalacyjną użytkownika.
+
+# Próby 0.16
 
 1. Podświetlenie: Filary → wybierz P2; tylko P2 ma być w pełnym niebieskim kolorze ZK z wyraźnym obrysem. Obróć widok, przełącz kartę i zamknij okno — grafika tymczasowa ma zniknąć bez zmiany kolorów modelu.
 2. Pomost: wpisz jezdnię L=5 m i P=3 m, kapy=2 m. Płyta ma 12 m, od osi 7 m w lewo i 5 m w prawo. Zwiększenie kapy nie zmienia obu jezdni. Sprawdź krawężniki, wyposażenie i rysunek przekroju.
