@@ -1,4 +1,14 @@
-﻿# ZK Most 0.20 — podgląd, teren i stałe posadowienie
+# ZK Most 0.21
+
+- Karta **Zbrojenie płyty** w edytorze mostu. Dwie niezależne siatki, osie prętów 3D, rzuty i zestawienie zapisane w DWG.
+- **Przyczółki**. Wybierz koniec i stronę, następnie **Wstaw widok boczny przyczółka**. Widok pobiera obrysy, wymiary i rzędne z modelu. Opcja **Ława i oparcie płyty** dodaje ściankę zapleczną, wspornik płyty, spadki ławy i podbeton do przyczółka ścianowego.
+- **Synchronizuj strony** kopiuje parametry skrzydła i stożka na drugą stronę danego przyczółka. Edycja strony przeciwnej rozłącza synchronizację.
+- Stożek podłużny dochodzi do nasady skrzydła. Obwiednia XREF przycina wystąpienie terenu również na rzędnych powyżej zera.
+- Ściany i skrzydła przepustu na jednej karcie. Przekrój poprzeczny domyślnie pokazuje lewą stronę po lewej w kierunku rosnącego kilometrażu.
+- Natywne powiększenie do obiektu. Przebudowa po edycji zachowuje ustawienie trzech rzutni. Izolacja uwzględnia warstwy składowe siatek.
+- Wspólny instalator V26. Aktualizator zna adres wydań.
+
+# ZK Most 0.20 — podgląd, teren i stałe posadowienie
 
 - Rzędna osi w środku obiektu zmienia pomost i ustrój nośny. Rzędne posadowienia podpór pozostają stałe; zmienia się wysokość podpór. Teren pozostaje na swojej rzędnej.
 - Nawigacja boczna i pogrupowana pierwsza karta: obiekt, oś, profil, teren oraz przekrój kontrolny.

@@ -1,4 +1,12 @@
-﻿# Walidacja 0.20
+# Próby wydania 0.21 w BricsCAD V26
+
+- Na kopii ZB-01-plyta.dwg sprawdzono 324 osie prętów 3D i 324 osie w rzucie oraz zestawienie. Po wyłączeniu dolnej siatki pozostały 162 pręty. Kolejne przebudowy i ponowne otwarcie zapisanego DWG zachowały liczbę i ustawienia.
+- Widok boczny przyczółka aktualizuje wymiar po wydłużeniu skrzydła z 5 do 7 m. Po obu przebudowach istnieje jeden tytuł widoku.
+- W przyciętym, skalowanym i obróconym odnośniku sprawdzono odczyt terenu wewnątrz i poza obwiednią na rzędnej 102 m. Suma kontrolna źródłowego DWG pozostała taka sama.
+- W aktywnej rzutni wykonano powiększenie do geometrii obiektu oraz izolację pomostu z kontrolą widoczności warstw wierzchołków i ścian siatek.
+- Sprawdzono 349 warunków geometrii i rysunków, 40 kontroli interfejsu oraz 25 kontroli aktualizatora. Dwa zestawy testów natywnych V26 zaliczyły 18 i 9 prób.
+
+# Walidacja 0.20
 
 Automatyczne testy w oddzielnym, niezapisanym rysunku BricsCAD V26: ZKMOSTTEST 18/18 i ZKSESSIONTEST 9/9. Sprawdzono bryły i siatki przepustu, filtr obwiedni obróconego bloku i odczyt TIN, usunięcie filtra, izolację warstw oraz trzy rzutnie z geometrią przekroju i znacznikiem.
 

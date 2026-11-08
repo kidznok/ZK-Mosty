@@ -1,4 +1,12 @@
-﻿# ZK Most 0.20
+# ZK Most 0.21
+
+[Pobierz wspólny instalator dla BricsCAD V26](https://github.com/kidznok/ZK-Mosty/releases/download/v0.21/ZKMost-Setup-0.21.exe).
+
+Wpisz **ZKMOST**, otwórz most, wybierz **Zbrojenie płyty** i włącz **Modeluj zbrojenie płyty**. Model, rzuty i zestawienie aktualizują się po zmianie parametrów. [Obsługa zbrojenia](ZBROJENIE-PLYTY.md).
+
+W karcie **Przyczółki** wybierz przyczółek i stronę. Przycisk **Wstaw widok boczny przyczółka** generuje rysunek w DWG. Opcja **Synchronizuj strony** łączy parametry skrzydeł i stożków danego przyczółka. [Pozostałe zmiany](ZMIANY-AKTUALNE.md) · [Wyniki prób](TESTY-CAD.md).
+
+# ZK Most 0.20
 
 [Instalator ZKMost-Setup-0.20.exe](https://github.com/kidznok/ZK-Mosty/releases/download/v0.20/ZKMost-Setup-0.20.exe).
 
