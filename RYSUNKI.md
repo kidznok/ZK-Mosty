@@ -1,4 +1,4 @@
-﻿# ZK Most 0.13.0 — rysunek ogólny
+﻿# ZK Most 0.13.1 — rysunek ogólny
 
 Pierwszy standard na podstawie przekazanego przykładu: plan sytuacyjny, przekrój poprzeczny i widok boczny / rozwinięty. Wartości są wyliczane z modelu; przykład nie jest odrysowany z wpisanymi na sztywno wymiarami.
 
