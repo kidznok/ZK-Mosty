@@ -1,0 +1,126 @@
+﻿# ZK Most 0.14.0 — graficzny przepust i praca bez zamykania okna
+
+ZKPRZEPUST otwiera graficzny edytor w stylu ZK: Oś i profil, Rura i półki, Ściany i teren, Model i rysunki. Wybierz oś, ustaw zakres i rzędne dna przy schemacie, potem przekrój i ściany. Wskazywanie w CAD dotyczy geometrii, nie wpisywania parametrów. Edycja istniejącego przepustu: ZKELEMENT i wskazanie elementu.
+
+Okna mostu i przepustu nie blokują CAD. Na żywo przelicza po krótkiej pauzie; Przelicz teraz wymusza przebudowę również bez zmiany parametrów. Zmiany odświeżają zapisane widoki. Wyłącz Na żywo, jeśli chcesz zebrać kilka zmian przed przebudową. Błąd przebudowy jest pokazywany w oknie; poprzednia transakcja modelu pozostaje zachowana.
+
+Wstążka ma kolumny po trzy rzędy. Publiczne polecenia pozostają bez numerów. Zakres przepustu można wskazać w dowolnej kolejności; dwa wskazania tego samego miejsca są odrzucane. Poprawiono samoprzecięcia segmentów płyty na załamaniach osi: płyta, kapa i krawężnik korzystają z rzeczywistej geometrii odsunięć.
+
+Weryfikacja: 258/258 geometrii, 21/21 interfejsu WPF, 14/14 aktualizatora offline; kompilacja bez ostrzeżeń. Praca okien modeless, kolejka wskazywania, natywna wstążka i odświeżanie po operacjach CAD wymagają testu w BricsCAD V26. Testy automatyczne nie zastępują próby w otwartym CAD.
+
+# ZK Most 0.13.1 — standard rysunku ogólnego
+
+Na podstawie przekazanego przykładu dodano: przekrój z łańcuchami wymiarowymi, rzędnymi i spadkami; bok z osiami podpór, wymiarami, nazwami kierunków i wypełnieniami; plan na rzeczywistym podkładzie WCS oraz arkusz A1/A2 z niezależnymi skalami rzutni. Ograniczono szwy geometrii i ukryte wnętrze ustroju.
+
+ZKMOST → Rysunki; ZKMOSTPODGLAD — podgląd; ZKMOSTARKUSZ — skład arkusza. W zakładce Rysunki przycisk Ujednolić istniejące widoki przekształca starsze widoki bez zmiany ich miejsca. Szczegóły: RYSUNKI.md.
+
+Testy geometrii i WPF obejmują rysunki i podglądy; natywne wymiary, wypełnienia, arkusz PDF i XREF wymagają prób w rzeczywistym CAD. Prześwit z TIN jest minimum próbkowanym, nie kontrolą normową. Instalator pozostaje bez podpisu wydawcy.
+
+# ZK Most 0.12.0 — instalator, wygląd ZK i aktualizacje
+
+Instalator: https://github.com/kidznok/ZK-Mosty/releases/latest
+
+Wspólna paleta ZK AutoDWG, przełączniki, zaokrąglone kontrolki i belka ZK Support / Co nowego / Pomoc / Ustawienia. Formularz ZK Support pochodzi ze wspólnej biblioteki ZK.UI.Wpf, z wariantami net8 dla CAD oraz net10 dla aplikacji desktopowych.
+
+Aktualizator obsługuje numerowane instalatory. Gotowy plik wgrany do katalogu głównego repozytorium main jest publikowany automatycznie przez workflow jako stabilne Release. Program sprawdza rozmiar i SHA-256, następnie czeka na zamknięcie BricsCAD i instaluje aktualizację. Przełącznik pozwala wyłączyć automat. Szczegóły: INSTALACJA.md.
+
+Weryfikacja: 227/227 geometrii, 17/17 WPF, 16/16 aktualizatora (w tym rzeczywiste pobranie opublikowanego EXE i kontrola SHA-256, bez uruchamiania instalacji). NSIS i DLL kompilują się bez błędów i ostrzeżeń. Pełnej instalacji i cyklu aktualizacji w rzeczywistym CAD jeszcze nie wykonano. Instalator nie ma podpisu certyfikatem wydawcy.
+
+# Aktualizacja: modelowanie po osi, przepusty i trwałe cięcia
+
+Gotowe do prób w BricsCAD V26: uniwersalny przekrój po osi z przekrojami na stacjach, rozmieszczanie bloków, przepusty, zapisane docięcia oraz niezależne punkty oparcia i obrót belek mostu.
+
+Wczytaj ponownie **ZKMost-start.lsp**. Dotychczasowe polecenia pozostają bez numerów. Na wstążce ZK Most są panele „Modelowanie po osi” i „Przepusty i obróbka”. Kilka obiektów po osi i przepustów może współistnieć z mostem w jednym DWG.
+
+Sprawdzone poza CAD: **227/227** testów geometrii i projekcji, **17/17** kontroli WPF; kompilacja bez błędów i ostrzeżeń. Test natywnego CAD pozostaje do uruchomienia: **ZKMOSTTEST**. Próba uruchomienia aplikacji przez narzędzie sterowania wygasła na etapie dostępu do aplikacji; nie ma wyniku testu natywnego.
+
+Instrukcja: **NOWE-NARZEDZIA.md**. Scenariusze prób: **TESTY-CAD.md**.
+
+Dwie niezależne linie wyposażenia na każdej stronie: „Przy krawędzi kapy” i „Przy jezdni”. Wybierz linię w zakładce Gzymsy i bariery, a następnie jej typ, wysokość i odsunięcie. Obie linie mogą działać jednocześnie. Odsunięcia mierzone są do środka od zewnętrznej krawędzi pomostu; dla bariery przy jezdni domyślnie szerokość kapy minus 0,15 m. Wysokości liczone są od lokalnej góry kapy, z osobnym przesunięciem podstawy. Zastosuj aktualizuje model oraz wszystkie zapisane widoki 2D. Polecenia pozostają bez zmian.
+
+Weryfikacja: 171/171 testów obliczeń i projekcji, 15/15 kontroli WPF, kompilacja bez ostrzeżeń i błędów. Nie wykonano testu wewnątrz BricsCAD.
+
+# Wyposażenie krawędzi pomostu
+
+Nowa zakładka **Gzymsy i bariery**, osobno dla L/P: gzyms prostokątny/trapezowy, balustrada, bariera stalowa/betonowa albo brak. Wszystko podąża za osią i profilem i jest uwzględniane w rysunkach. Szczegóły: [GZYMSY-I-BARIERY.md](GZYMSY-I-BARIERY.md).
+
+# Nowość: stopy stożków z terenu w XREF
+
+Dostępny jest wybór 3DFACE / siatki z odnośnika oraz automatyczne przecięcie skarpy z TIN. Nie trzeba wpisywać Z stopy. Instrukcja: [TEREN-Z-ODNOSNIKA.md](TEREN-Z-ODNOSNIKA.md). Poniższe opisy ręcznej Z dotyczą trybu po wyłączeniu **Stopa z terenu**.
+
+# ZK Most — dokładność belek, lekki podgląd i stałe polecenia
+
+## Uruchomienie
+
+Wczytaj **ZKMost-start.lsp** przez APPLOAD. Loader podpina nową implementację pod te same polecenia: **ZKMOST**, **ZKMOSTBUILD**, **ZKMOSTRIBBON** i pozostałe nazwy bez końcówek. Zastępuje wejścia poleceń również wtedy, gdy w procesie są starsze DLL. Wstążka używa stałych nazw i usuwa wcześniejsze zakładki wersji 0.1–0.4.
+
+Sam loader nie przebudowuje geometrii. Otwórz istniejący obiekt poleceniem **ZKMOST**, wybierz parametry i kliknij **Zastosuj · model i rysunki**. Bieżące biblioteki są w `plugin/current`; numer w nazwie wewnętrznego pliku DLL nie jest częścią poleceń użytkownika.
+
+## Poprawione powiązanie skrzydła i stożka
+
+Poprzedni wachlarz stożka zaczynał się przy narożniku przyczółka i mógł przecinać skrzydło. Teraz przy włączonym skrzydle korona stożka znajduje się za jego końcem, na zewnętrznej stronie ściany. Cały sektor pozostaje po zewnętrznej stronie płaszczyzny skrzydła i poza jego końcem; położenie uwzględnia A1/A2, L/P, grubość i kąt skrzydła. Bez skrzydła stożek znajduje się za ścianą przyczółka, po stronie nasypu.
+
+Automatyczna korona leży domyślnie 0,15 m poniżej góry końca skrzydła. Pole „Korona pod końcem” zmienia tę różnicę. Nie jest już brana niezależna rzędna jezdni przy przyczółku. Ręczna korona powyżej końca skrzydła jest odrzucana.
+
+Automatyczna wysokość skrzydła uwzględnia niweletę dojazdu w miejscu końca, a nie samą rzędną początkową. Początek i koniec korzystają z odniesienia do tej samej bocznej linii drogi, z zadanym obniżeniem. W rzucie końca na oś uwzględniana jest geometria osi, jeśli adapter udostępnia takie rzutowanie. Poza końcem osi niweleta jest przedłużana liniowo jej skrajnym spadkiem — to jawne założenie, nie odczyt terenu.
+
+W zakładce Skrzydła i stożki:
+- „Ręczne Z ściany” pozwala wpisać Z początku, Z końca oraz Z dołu ściany. Fundament skrzydła jest pod tym dołem, z grubością fundamentu przyczółka.
+- „Korona Z ręcznie” pozwala wpisać osobną rzędną korony stożka.
+- „Stopa stożka Z” nadal jest rzędną podawaną przez użytkownika. Nie istnieje automatyczne dopasowanie stopy do powierzchni terenu. Błędnie podana Z stopy nadal oznacza błędne położenie względem faktycznego gruntu.
+
+Wartości ręczne są wartościami bezwzględnymi w układzie wysokościowym rysunku; po włączeniu trybu trzeba ustawić właściwe rzędne projektu. Nie należy traktować liczb domyślnych jako pomierzonych rzędnych terenu.
+
+Testy kontrolują brak przecięcia z całym skrzydłem w planie dla A1/A2 i L/P, wysokość korony względem końca, wpływ niwelety dojazdu, ręczne rzędne i odrzucenie korony ponad ścianą. Nie odczytano DWG użytkownika i nie wykonano tej poprawki w BricsCAD. Natywne zachowanie i faktyczne rzędne terenu wymagają sprawdzenia na rysunku. Wariant lekki oraz aktualizacja rysunków pozostają aktywne.
+
+## Wskazywanie zakresu na osi
+
+Na zakładce **Pomost** przy A1 i A2 są przyciski **Wskaż na osi**, a pośrodku **Wskaż zakres**. Okno jest czasowo oddawane do interakcji CAD. Kliknięte miejsce jest rzutowane na najbliższy punkt zapisanej osi mostu; pole dostaje odległość od początku tej osi. W wierszu poleceń podawany jest również kilometraż z uwzględnieniem początku kilometrażu.
+
+Wskaż zakres pobiera dwa punkty i dopiero po ich poprawnym wskazaniu zmienia oba końce. Esc podczas wyboru zachowuje dotychczasowe wartości. Zakres musi być rosnący i mieć co najmniej 0,1 m. Skrajne przyczółki podążają za wybranym początkiem i końcem; podpory pośrednie zachowują własne stacje. Po zmianie zakresu należy je w razie potrzeby dostosować przed Zastosuj. Przebudowa nadal odświeża zapisane rysunki.
+
+## Dokładność belek
+
+W zakładce **Belki**:
+
+- **Dokładność [mm]** — tolerancja adaptacyjnego podziału. Większa liczba dopuszcza większą odchyłkę i zwykle wymaga mniej przekrojów. Zakres 0,1–1000 mm; domyślnie 20 mm.
+- **Maks. krok belki [m]** — niezależny krok belki, bez zmieniania płyty i wyposażenia. Zakres 0,25–20 m; domyślnie 5 m.
+
+Punkty charakterystyczne osi i niwelety nadal obowiązują. Maksymalny krok nie gwarantuje jednakowej odległości przekrojów: silnik dodaje punkty wymagane przez geometrię i dokładność. Stara stała tolerancja 5 mm została usunięta. Wybrana dokładność dotyczy obliczanej geometrii belek oraz rysunków 2D.
+
+## Lekki podgląd
+
+W zakładce **Oś i widoczność**:
+
+- **Model w CAD → Lekki podgląd (siatka)** — domyślny tryb. Zastępuje natywne loftowanie i wyciąganie Solid3d lekkimi PolyFaceMesh. Każda część ma własną siatkę i zachowuje identyfikator oraz poziom pracy.
+- **Krok lekkiego podglądu [m]** — gęstość przekrojów widocznej siatki belek. Zakres 1–25 m, domyślnie 8 m. Zmienia tylko podgląd 3D.
+- **Model w CAD → Pełne bryły 3D** — przy następnym Zastosuj powstają ponownie bryły, w tym loft belek. Jest to kosztowniejszy tryb do pracy z bryłami.
+- Dotychczasowy krok modelowania ma teraz nazwę **Krok płyty i wyposażenia [m]**.
+
+Siatka podglądu nie jest zamkniętą bryłą do obliczania objętości. Pokazuje powierzchnie boczne, może mieć otwarte czoła i pomija część przekrojów pośrednich. Dla bardzo dużej liczby przekrojów dodatkowo ogranicza liczbę wierzchołków do bezpiecznego zakresu PolyFaceMesh. Nie stosuj jej do przedmiaru brył.
+
+## Rysunki pozostają aktualne
+
+Zarówno **Zastosuj · model i rysunki**, jak i **ZKMOSTBUILD** regenerują zapisane widoki w tej samej transakcji co model. Rzut, bok, rozwinięcie i przekroje zawsze korzystają z pełnego obliczonego ciągu przekrojów według ustawionej dokładności belek. Nie korzystają z rzadszej siatki podglądu. Zachowują położenie i kilometraże.
+
+Testy porównują rysunki z trybu pełnego i lekkiego przy tych samych parametrach: wyniki są identyczne. Zmiana dokładności belek może zmienić również rysunki — jest to świadoma zmiana dokładności geometrii. Zmiana samego kroku lekkiego podglądu nie zmienia rysunków.
+
+## Dodatkowe usprawnienia
+
+Odległości wierzchołków osi źródłowej i odsuniętych osi belek są buforowane raz na przebudowę. Wyznaczanie punktów nie powtarza już dla każdego przekroju natywnych odczytów odległości i konwersji parametru. Odsunięte krzywe są zwalniane po zakończeniu pracy.
+
+Po przebudowie w wierszu poleceń pojawiają się tryb, dokładność, liczba przekrojów obliczeniowych i podglądu oraz osobne czasy obliczeń i zapisu CAD/rysunków. Pozwala to rozróżnić koszt geometrii od kosztu natywnego rysowania. Nie wykonano pomiaru przyspieszenia w rzeczywistym BricsCAD.
+
+## Sprawdzenie
+
+- Kompilacja SDK BricsCAD V26/.NET 8: 0 błędów, 0 ostrzeżeń.
+- **171/171** testów obliczeń/projekcji. Dodatkowo sprawdzono wpływ tolerancji i kroku na liczbę przekrojów, redukcję podglądu, brak modyfikacji geometrii rysunkowej i identyczność wszystkich typów rysunków pomiędzy trybami.
+- **15/15** kontroli WPF. Nowe pola, przeliczenie mm na metry, wybór obu trybów i zapis parametrów działają w niezależnym uruchomieniu WPF.
+- Obejrzano rendery obu zakładek z nowymi ustawieniami.
+- Sprawdzono składnię nawiasów loadera oraz zgodność wszystkich 17 stałych nazw poleceń z wewnętrznymi wejściami DLL.
+
+Nie wykonano APPLOAD, tworzenia PolyFaceMesh, nadpisania poleceń LISP ani pełnej przebudowy w BricsCAD. Natywny wybór punktów przez EditorUserInteraction także nie był wykonany. Ich zachowanie i rzeczywisty czas wymagają potwierdzenia w aplikacji. Logi: `build-results-current.txt`, `test-results-current.txt`, `ui-results-current.txt`.
+
+
+
+
