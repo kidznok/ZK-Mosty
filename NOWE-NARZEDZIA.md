@@ -1,4 +1,30 @@
-﻿# ZK Most 0.14.0 — graficzny przepust i praca bez zamykania okna
+﻿# ZK Most 0.15.0 — obiekty w DWG i geometria dojazdów
+
+Nowy obiekt (ZKMOSTNEW) otwiera wybór Most / Przepust. Edytuj (ZKMOST) wyświetla listę mostów i przepustów zapisanych w DWG. Obsługiwanych jest wiele mostów, a zapis starego pojedynczego mostu jest zachowywany i dołączany do listy. ZKPRZEPUST nadal działa jako skrót. Pierwsza karta zawiera nazwę, oś, źródło niwelety i teren. Dotychczasowe publiczne polecenia pozostają bez numerów.
+
+Oś: ZK Droga, polilinia 2D ze stałą rzędną lub osobnym profilem, otwarta polilinia 3D z odcinków prostych. Kilometraż osi 3D jest mierzony w planie, wysokość jest interpolowana z jej wierzchołków. Odcinki pionowe / zerowe w planie są odrzucane. Dla przepustu Cała polilinia aktualizuje zakres po skróceniu i wydłużeniu osi. Przy Na żywo zmiana obserwowanej osi / profilu / polilinii skrzydła wywołuje przebudowę po zakończeniu polecenia CAD. Bez Na żywo użyj Przelicz teraz.
+
+Przepust: cztery niezależne skrzydła A-L, A-P, B-L, B-P. Przebieg z kąta i długości albo ze wskazanej otwartej polilinii 2D (proste odcinki, bez bulge). Bliższy koniec jest początkiem; przebieg zostaje przesunięty tak, aby zaczynał się przy narożniku ściany. Z polilinii pobierany jest przebieg XY, rzędne wynikają z góry ściany, obniżenia końca i głębokości podstawy. Każde skrzydło ma własną grubość. Zmiana polilinii jest odczytywana ponownie przy przeliczeniu.
+
+Most: automatyczny dobór prowadzenia belek jest domyślnie aktywny dla nowych obiektów. Łuk / zmiana kierunku daje prowadzenie po odsuniętej osi. Ręczny wybór prowadzenia wyłącza automat; można go ponownie włączyć w Belki. Proste prefabrykaty pozostają dostępnym wyborem.
+
+Podpory: kilometraż osi km+m, stacja od początku osi, odległość od początku obiektu i wskazanie w CAD są powiązane. Nowa podpora trafia w największą wolną lukę. Początek zakresu przesuwa kolidujący koniec o 1 m dalej (dla przepustu z ograniczeniem do długości osi).
+
+Poprzecznice: na podporach, w środku przęseł, co zadany odstęp od A1, własne stacje wpisane średnikami lub wskazane w CAD. Dodatkowe poprzecznice mogą mieć wspólny zadany skos. Powtarzające się stacje są scalane.
+
+Przyczółek i dojazd: wariant ścianowy lub słupowy w nasypie, skrzydło pełne, podcięte lub podwieszone. Podwieszone skrzydło nie generuje fundamentu. Płyta przejściowa jest osobno włączana przy każdym przyczółku: długość, grubość, zagłębienie pod niweletą i spadek od przyczółka. Stożek ma teraz także połączoną koronę i skarpę wzdłuż skrzydła, zamiast samego wachlarza za końcem ściany. Stopy skarp mogą nadal wynikać z terenu TIN / 3DFACE w XREF.
+
+Karty podświetlają właściwe elementy zielonymi grafikami tymczasowymi, bez zmiany właściwości obiektów. Przy wyposażeniu wyróżniana jest wybrana strona. Strzałka A → B pokazuje rosnący kilometraż; L/P wynikają z tego kierunku, niezależnie od obrotu widoku.
+
+Warstwy i arkusze mają prefiks z nazwy obiektu, np. M-01_Pomost, M-01_Ustroj, M-01_Podpory, M-01_RYS_RZUT_1. Nazwy o jednakowym prefiksie są odrzucane, aby nie mieszać warstw różnych obiektów. Przy przebudowie istniejące warstwy elementów modelu są przemianowywane na czytelne. Poprawiono przycięte cyfry w polach i wyświetlanie nazw podpór.
+
+Rysunki nadal korzystają ze wspólnej wynikowej geometrii i są odświeżane z przebudową. Wskazane rozwiązania geometrii są konfigurowalne: nie wykonują obliczeń nośności ani automatycznego wymiarowania konstrukcyjnego.
+
+Źródło odniesienia dla skrzydeł, nasypu i płyt przejściowych: Ministerstwo Infrastruktury, WR-M-11, wersja 01 z 2021-03-02, rozdziały 6.3.2 i 7.2: https://www.gov.pl/attachment/2e6cbd2f-fa3d-497b-a384-9295cf7da368 . Domyślne wymiary są parametrami modelera, a nie sprawdzeniem zgodności projektu z wytycznymi.
+
+Testy Core / WPF i kompilacja są wykonywane automatycznie. Weryfikacja natywnych funkcji CAD (grafiki tymczasowe, reakcja na uchwyty, zapis wielu obiektów i bryły po podcięciu) wymaga prób w BricsCAD V26. ZKMOSTTEST rozszerzono o oś 3D i zapis dwóch niezależnych mostów; test wycofuje swoją transakcję.
+
+# ZK Most 0.14.0 — graficzny przepust i praca bez zamykania okna
 
 ZKPRZEPUST otwiera graficzny edytor w stylu ZK: Oś i profil, Rura i półki, Ściany i teren, Model i rysunki. Wybierz oś, ustaw zakres i rzędne dna przy schemacie, potem przekrój i ściany. Wskazywanie w CAD dotyczy geometrii, nie wpisywania parametrów. Edycja istniejącego przepustu: ZKELEMENT i wskazanie elementu.
 

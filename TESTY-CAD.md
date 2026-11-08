@@ -1,4 +1,16 @@
-﻿# Próby wersji 0.14.0
+﻿# Próby 0.15.0
+
+1. Nowy obiekt → Most, nadaj nazwę, wybierz 2D / 3D / ZK Droga i teren. Utwórz drugi most i przepust; Edytuj ma pokazać wszystkie. Zamknij i otwórz DWG, powtórz edycję.
+2. Przepust → Cała polilinia + Na żywo: skróć / wydłuż oś uchwytem. Sprawdź model, zakres i istniejące rysunki po zakończeniu polecenia.
+3. Skrzydła przepustu: włącz A-L, A-P, B-L, B-P; ustaw różne kąty, a jedno poprowadź polilinią z trzech prostych odcinków. Przesuń wierzchołek źródła, sprawdź przebudowę.
+4. Most po łuku: automat belek wybiera po osi; wybór ręczny Prosto wyłącza automat. Przełączaj karty i sprawdzaj zielone wyróżnienie; przy wyposażeniu zmieniaj L/P względem strzałki A→B.
+5. + Podpora kilka razy: nie powinna trafiać na istniejącą. Wpisz kilometraż 1+240, odległość od początku obiektu i wskaż miejsce na osi; wszystkie odczyty mają być zgodne.
+6. Poprzecznice: wyłącz podpory, włącz odstęp 8 m, dodaj stacje 25;35 i skos. Sprawdź model i rzut.
+7. Przyczółek i dojazd: słupowy, skrzydło podwieszone / podcięte, płyta przejściowa. Sprawdź bok, przekrój, brak fundamentu pod skrzydłem podwieszonym i połączenie skarpy ze stożkiem.
+8. Zmień nazwę M-01 na MD-02, przelicz: nowe prefiksy warstw, model i rysunki tego samego obiektu. Zduplikowana nazwa powinna być odrzucona bez utraty modelu.
+9. ZKMOSTTEST: nowe próby osi 3D i wielu obiektów; wszystkie dane testowe są wycofywane. Wynik natywnego CAD raportuj oddzielnie od testów Core/WPF.
+
+# Próby wersji 0.14.0
 
 1. ZKPRZEPUST powinien od razu otworzyć okno. Wybierz oś, wskaż dwa końce w odwrotnej kolejności i sprawdź zakres.
 2. Zmień rzędne dna A/B, średnicę, półki i ściany. Model powinien odświeżyć się bez zamykania okna; obróć widok CAD przy otwartym oknie.
