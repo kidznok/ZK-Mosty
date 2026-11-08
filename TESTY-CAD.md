@@ -1,3 +1,9 @@
+# Próby wydania 0.23 w BricsCAD V26
+
+- Na kopii ZB-01 zmieniono długość płyty A2 z 4,00 na 7,40 m. Po przebudowie pomiar punktów tego samego rodzaju wymiaru w widoku bocznym dał 7,40 m. W widoku był jeden taki wymiar. Sprawdzono też długość płyty A1 oraz długość skrzydła.
+- Sprawdzono cały model przy ukrytym tle i ponownie po izolacji belek. Wszystkie warstwy wygenerowanych elementów były włączone, odmrożone i miały pełne krycie. Osobna warstwa kontrolna zachowała wyłączenie i blokadę.
+- Po przebudowie, zapisie i ponownym odczycie kopii DWG sprawdzono ustawienie widoczności i długość płyty A2. Osobny test edytora WPF zmienił tę długość bezpośrednio z widoku skrzydła.
+
 # Próby wydania 0.22 w BricsCAD V26
 
 - W układzie trzech rzutni na kopii mostu M-01 z terenem w XREF kliknięto przycisk w karcie Belki. Widocznych było pięć belek spośród 833 elementów modelu. Po przeliczeniu w otwartym edytorze porównano obraz cieniowanej rzutni z rysunkiem zawierającym tylko pięć belek. W przebiegu końcowym różnił się jeden piksel z ponad pięciu milionów.

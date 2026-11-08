@@ -1,3 +1,7 @@
+# ZK Most 0.23
+
+W karcie **Przyczółki** ustawisz długość płyty przejściowej przy jej przełączniku, także podczas edycji skrzydła. **Pokaż cały obiekt** przywraca pełną widoczność wybranego modelu i zapisuje ten wybór w DWG. [Instalator dla BricsCAD V26](https://github.com/kidznok/ZK-Mosty/releases/download/v0.23/ZKMost-Setup-0.23.exe) · [Wyniki prób](TESTY-CAD.md).
+
 # ZK Most 0.22
 
 Po wybraniu **Belki → Wyizoluj element** widok pokazuje same belki również po przeliczeniu mostu. **Pokaż cały obiekt** przywraca wcześniejszą widoczność warstw. [Pobierz instalator dla BricsCAD V26](https://github.com/kidznok/ZK-Mosty/releases/download/v0.22/ZKMost-Setup-0.22.exe).

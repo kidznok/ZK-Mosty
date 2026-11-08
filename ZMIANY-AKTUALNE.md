@@ -1,3 +1,9 @@
+# ZK Most 0.23
+
+W karcie **Przyczółki** pole **Długość płyty [m]** znajduje się przy przełączniku **Płyta przejściowa**. Możesz zmienić długość dla A1 lub A2 także podczas edycji skrzydła. Po przeliczeniu zmienia się model płyty i jej wymiar we wstawionym widoku bocznym.
+
+**Pokaż cały obiekt** włącza warstwy modelu wybranego obiektu i przywraca jego pełne krycie. Działa również po wygaszeniu poziomu. Wybór zapisuje się w DWG. W karcie **Oś i widoczność** możesz ponownie włączyć wygaszanie albo ukrywanie pozostałych poziomów.
+
 # ZK Most 0.22
 
 W edytorze wybierz **Belki → Wyizoluj element**. BricsCAD przełącza warstwy i odświeża wszystkie rzutnie. Przebudowa modelu stosuje aktywną izolację przed wyświetleniem wyniku. **Pokaż cały obiekt** przywraca wcześniejszą widoczność warstw.
