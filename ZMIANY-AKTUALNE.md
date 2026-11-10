@@ -1,3 +1,7 @@
+# ZK Most 0.51
+
+Podgląd 3D zajmuje pełną szerokość panelu. Pomost, belki i podpory mają osobne kolory. Możesz powiększać i przesuwać model w podglądzie.
+
 # ZK Most 0.25
 
 - Okno Obliczenia dla otwartego mostu i polecenie ZKMOSTOBLICZENIA. Import stacji podpór, samodzielne określenie schematu i EI.

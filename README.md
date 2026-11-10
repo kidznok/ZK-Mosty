@@ -1,3 +1,7 @@
+# ZK Most 0.51
+
+W oknie obiektów podgląd 3D ma stały kadr. Kółkiem myszy lub przyciskami + i − możesz powiększyć detal, a przyciskiem „Całość” wrócić do widoku całego obiektu. [Pobierz instalator 0.51 dla BricsCAD V26](https://github.com/kidznok/ZK-Mosty/releases/download/v0.51/ZKMost-Setup-0.51.exe).
+
 # ZK Most 0.25
 
 W edytorze mostu kliknij **Obliczenia** lub wpisz `ZKMOSTOBLICZENIA`. Moduł importuje długość i stacje podpór. Użytkownik ustala schemat statyczny i sztywność EI. [Instrukcja obliczeń](OBLICZENIA.md).
