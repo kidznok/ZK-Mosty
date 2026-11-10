@@ -1,3 +1,7 @@
+# ZK Most 0.52
+
+Wersja 0.52 wykrywa numer instalatora w GitHub Releases, także pod stałym tagiem. Domyślnie pobiera nowe wydanie po uruchomieniu dodatku i instaluje je po zamknięciu BricsCAD. Ustawienia sprawdzania i instalacji można zmienić poleceniem ZKMOSTUPDATE.
+
 # ZK Most 0.51
 
 Podgląd 3D zajmuje pełną szerokość panelu. Pomost, belki i podpory mają osobne kolory. Możesz powiększać i przesuwać model w podglądzie.

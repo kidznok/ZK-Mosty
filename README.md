@@ -1,3 +1,7 @@
+# ZK Most 0.52
+
+Automatyczne aktualizacje z GitHub Releases. [Pobierz instalator 0.52 dla BricsCAD V26](https://github.com/kidznok/ZK-Mosty/releases/download/v0.52/ZKMost-Setup-0.52.exe).
+
 # ZK Most 0.51
 
 W oknie obiektów podgląd 3D ma stały kadr. Kółkiem myszy lub przyciskami + i − możesz powiększyć detal, a przyciskiem „Całość” wrócić do widoku całego obiektu. [Pobierz instalator 0.51 dla BricsCAD V26](https://github.com/kidznok/ZK-Mosty/releases/download/v0.51/ZKMost-Setup-0.51.exe).
@@ -52,17 +56,11 @@ Po instalacji uruchom BricsCAD. Gdy profil ma wyłączone automatyczne ładowani
 
 ## Kolejne wersje
 
-Wgraj na gałąź **main** gotowy plik **ZKMost-Setup-0.16.exe**, potem kolejny z wyższym numerem, np. ZKMost-Setup-0.17.exe. Wersje nowych wydań mają dwa człony: 0.16, 0.17 itd. Workflow automatycznie:
-
-1. wybierze najwyższy numer spośród instalatorów w katalogu głównym;
-2. porówna nazwę z ProductVersion pliku EXE;
-3. utworzy stabilne GitHub Release z odpowiednim tagiem i instalatorem.
-
-Starsze pliki mogą pozostać. Nie zmieniaj samej nazwy starszego instalatora. Nowe EXE muszą rzeczywiście zawierać nową wersję programu. Jeśli GitHub Actions są wyłączone, opublikuj Release ręcznie: np. tag `v0.16`, plik `ZKMost-Setup-0.16.exe`.
+W [GitHub Releases](https://github.com/kidznok/ZK-Mosty/releases) dodaj gotowy instalator, np. **ZKMost-Setup-0.53.exe**, jako załącznik do nowego lub istniejącego stabilnego wydania. Opublikuj lub zapisz wydanie. Możesz zachować tag i starsze pliki. Numer w nazwie pliku odpowiada wersji produktu wewnątrz EXE.
 
 ## Aktualizator
 
-Domyślnie sprawdza stabilne Releases w tle po uruchomieniu dodatku (nie częściej niż co 12 godzin). Pobiera nowszy instalator, sprawdza rozmiar i SHA-256 z GitHub, czeka na zamknięcie wszystkich procesów BricsCAD i uruchamia instalację. Nie zamyka rysunków. Przełącznik w ustawieniach wyłącza aktualizacje automatyczne.
+Od wersji 0.52 przy uruchomieniu dodatku ZK Most wybiera najwyższy numer instalatora spośród stabilnych wydań. Przy ustawieniach domyślnych pobiera nowszy plik, weryfikuje go i instaluje po zamknięciu wszystkich instancji BricsCAD. W **ZKMOSTUPDATE** można osobno wyłączyć instalowanie lub sprawdzanie przy starcie.
 
 ## Wersja 0.13.1 — rysunek ogólny
 
